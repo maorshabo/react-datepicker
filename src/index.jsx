@@ -655,9 +655,10 @@ export default class DatePicker extends React.Component {
       return calendar;
     }
 
+    const rootDivStyle = { dislay: this.props.rootInline ? 'inline' : 'block'};
     if (this.props.withPortal) {
       return (
-        <div>
+        <div style={rootDivStyle}>
           {!this.props.inline ? (
             <div className="react-datepicker__input-container">
               {this.renderDateInput()}
